@@ -1,5 +1,13 @@
 #!/bin/bash
 # Initialise system for SAS 9.4 Install
+# ****************************************************************************************
+#
+# Intro:
+#
+# This file creates the user accounts groups
+#
+# ****************************************************************************************
+
 
 # ****************************************************************************************
 #
@@ -44,6 +52,7 @@ mount /dev/xvdf1 /opt/sas
 
 # create the sas external account
 adduser -m sas
+
 # create the sassrv external account
 adduser -m sassrv
 
@@ -62,6 +71,7 @@ usermod -aG sasinstall sassrv
 
 #make sassrv and sasdemo a member of the group sasusers
 usermod -aG sasusers sasdemo
+
 # Make group sasinstall the primary group of sas
 usermod -g sasinstall sas
 
@@ -72,6 +82,7 @@ usermod -aG wheel sas
 # mount /dev/xvdf1 /mnt/sasdepot
 
 #copy the files from /mnt/sasdepot to /opt/sas/sasdepot
+# copy not needed
 #cp -avr /mnt/sasdepot /opt/sas/
 
 #chown -R sas:sasinstall /opt/sas/
