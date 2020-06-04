@@ -1,0 +1,6 @@
+# install java
+# need new path
+#yum install /home/ec2-user/jre-8u251-linux-x64.rpm -y
+
+chown -R sas:sasinstall /opt/sas/
+chmod -R 775 /opt/sas/
