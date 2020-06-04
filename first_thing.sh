@@ -15,3 +15,6 @@ yum install libXp libXmu numactl mailx java-1.8.0-openjdk-devel lsof -y
 echo "verify openssl"
 
 openssl s_client -connect linuxconfig.org:443 -showcerts
+
+# create the root folder for SAS
+mkdir /opt/sas
