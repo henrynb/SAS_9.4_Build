@@ -8,5 +8,5 @@ mkdir -p /opt/sas/saswork/
 
 chown -R sas:sasinstall /opt/sas/
 chown -R sas:sasinstall /etc/opt/vmware/vfabric/
-chown -R sas:sasinstall /opt/sas/saswork/
+
 chmod -R 775 /opt/sas/
