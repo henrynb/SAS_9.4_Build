@@ -18,20 +18,19 @@ adduser -m sassrv
 #create the sas demo user
 adduser -m sasdemo
 
-defaultpwd=Butterfly2020
  
 #add additional users
 adduser -m henrynb
-adduser -m waynec; echo defaultpwd | passwd waynec --stdin
-adduser -m sarab; echo defaultpwd | passwd sarab --stdin
-adduser -m robb; echo defaultpwd | passwd robb --stdin
-adduser -m robs; echo defaultpwd | passwd robs --stdin
-adduser -m martins; echo defaultpwd | passwd martins --stdin
-adduser -m jamesh; echo defaultpwd | passwd jamesh --stdin
-adduser -m lucyw; echo defaultpwd | passwd lucyw --stdin
-adduser -m pradnyap; echo defaultpwd | passwd pradnyap --stdin
-adduser -m patricka; echo defaultpwd | passwd patricka --stdin
-adduser -m subbermans; echo defaultpwd | passwd subbermans --stdin
+adduser -m waynec; echo Butterfly2020 | passwd waynec --stdin
+adduser -m sarab; echo Butterfly2020 | passwd sarab --stdin
+adduser -m robb; echo Butterfly2020 | passwd robb --stdin
+adduser -m robs; echo Butterfly2020 | passwd robs --stdin
+adduser -m martins; echo Butterfly2020 | passwd martins --stdin
+adduser -m jamesh; echo Butterfly2020 | passwd jamesh --stdin
+adduser -m lucyw; echo Butterfly2020 | passwd lucyw --stdin
+adduser -m pradnyap; echo Butterfly2020 | passwd pradnyap --stdin
+adduser -m patricka; echo Butterfly2020 | passwd patricka --stdin
+adduser -m subbermans; echo Butterfly2020 | passwd subbermans --stdin
 
 # create the sas installers group
 groupadd sasinstall
