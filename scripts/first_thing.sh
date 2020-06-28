@@ -14,11 +14,6 @@ echo "verify openssl"
 
 openssl s_client -connect linuxconfig.org:443 -showcerts
 
-# create directories
-
-# create the root directory for SAS
-mkdir /opt/sas
-
 # create the sub-directories within the root directory for SAS
 mkdir -p /opt/sas/sashome/
 mkdir -p /opt/sas/sasconfig/
@@ -37,14 +32,13 @@ mkdir -p /mnt/sasdepot/
 mkdir -p /etc/opt/vmware/vfabric/
 
 #mount the sasdepot
-#mount /dev/xvdf1 /mnt/sasdepot/
+mount /dev/xvdf1 /mnt/sasdepot/
 
 # Modify limits.conf
 # created backup and removes end of line comment /etc/security/limits.?
 sed -i.orig  "/# End of file/d" /etc/security/limits.conf
 
 #cp /etc/security/limits.conf /etc/security/limits.conf.orig
-
 echo "*                soft    nofile          20480" >> /etc/security/limits.conf
 echo "*                hard    nofile          65535" >> /etc/security/limits.conf
 echo "*                soft    nproc           20480" >> /etc/security/limits.conf
