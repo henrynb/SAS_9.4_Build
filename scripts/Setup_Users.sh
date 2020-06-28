@@ -8,9 +8,6 @@
 #
 # ****************************************************************************************
 
-# create the root folder for SAS
-mkdir /opt/sas
-
 # Create user accounts
 # create the sas external account
 adduser -m sas
@@ -21,18 +18,20 @@ adduser -m sassrv
 #create the sas demo user
 adduser -m sasdemo
 
+defaultpwd=Butterfly2020
+ 
 #add additional users
 adduser -m henrynb
-adduser -m waynec
-adduser -m sarab
-adduser -m robb
-adduser -m robs
-adduser -m martins
-adduser -m jamesh
-adduser -m lucyw
-adduser -m pradnyap
-adduser -m patricka
-adduser -m subbermans
+adduser -m waynec; echo defaultpwd | passwd waynec --stdin
+adduser -m sarab; echo defaultpwd | passwd sarab --stdin
+adduser -m robb; echo defaultpwd | passwd robb --stdin
+adduser -m robs; echo defaultpwd | passwd robs --stdin
+adduser -m martins; echo defaultpwd | passwd martins --stdin
+adduser -m jamesh; echo defaultpwd | passwd jamesh --stdin
+adduser -m lucyw; echo defaultpwd | passwd lucyw --stdin
+adduser -m pradnyap; echo defaultpwd | passwd pradnyap --stdin
+adduser -m patricka; echo defaultpwd | passwd patricka --stdin
+adduser -m subbermans; echo defaultpwd | passwd subbermans --stdin
 
 # create the sas installers group
 groupadd sasinstall
