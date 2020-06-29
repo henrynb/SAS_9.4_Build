@@ -29,9 +29,10 @@ cp /root/git/SAS_9.4_Build/downloads/junit/junit-4.10.jar /opt/sas/junit/junit-4
 mkdir -p /mnt/sasdepot/
 
 # create the vmware vfabric folder
-mkdir -p /etc/opt/vmware/vfabric/
+#mkdir -p /etc/opt/vmware/vfabric/
 
 #mount the sasdepot
+# at the end of this script, you need to re-boot. this temp mount is lost
 mount /dev/xvdf1 /mnt/sasdepot/
 
 # Modify limits.conf

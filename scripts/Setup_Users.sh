@@ -10,14 +10,13 @@
 
 # Create user accounts
 # create the sas external account
-adduser -m sas
+adduser -m sas; echo BzPxt3RX | passwd sas --stdin
 
 # create the sassrv external account
-adduser -m sassrv
+adduser -m sassrv; echo 5nzTRqDY | passwd sassrv --stdin
 
 #create the sas demo user
-adduser -m sasdemo
-
+adduser -m sasdemo; echo X7Q8ARz4 | passwd sasdemo --stdin
  
 #add additional users
 adduser -m henrynb
@@ -63,4 +62,12 @@ usermod -g sasinstall sas
 #add sas to root group
 usermod -aG wheel sas
 
+
+chown -R sas:sasinstall /mnt/sasdepot
+chown -R sas:sasinstall /opt/sas
+
+chmod -R 775 /opt/sas
+#chown -R sas:sasinstall /etc/opt/vmware/vfabric/
+
+chmod -R 775 /mnt/sasdepot
 
